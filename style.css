@@ -1,0 +1,250 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+html{
+    font-family: 'Noto Serif JP', serif;
+}
+body{
+    width: 76%;
+    margin: 0 auto;
+}
+.header{
+    margin-top: 20px;
+}
+.header_menu{
+    display: flex;
+    justify-content:space-between;
+}
+.menu_left, .menu_right{
+    display: flex;
+}
+.menu_list-item{
+    list-style:none;
+    padding-right:10px ;
+}
+.slide_content{
+    position: relative;
+    margin:15px 0; 
+    border: 1px solid;
+    box-shadow: 0 10px 10px #888888  ;
+}
+.slide_image{
+    display: none;
+   
+}
+.slide_image img{
+    height:400px;
+}
+.slide_line{
+    border-top: 2px solid rgb(54, 51, 51);
+    border-bottom: 2px solid rgb(54, 51, 51);
+    width: 100%;
+    height:30px;
+    font-size: 600;
+    color:red; 
+}
+.btn_prev,.btn_next{
+    position: absolute;
+    top: 200px;
+    width:40px;
+    height:40px;
+    background-color:#ccc;
+    color: black;
+}
+.btn_next{
+    right: 30px;
+}
+.btn_prev{
+    left: 30px;
+}
+.list-langues{
+    text-decoration: underline;
+}
+.menu_list-item a{
+    text-decoration: none;
+    color:black;
+}
+.header_title{
+    text-align: center;
+    padding-bottom: 10px;
+}
+.header_logo-titel{
+    font-size:60px;
+    font-weight:600;
+}
+.header_logo-content{
+    margin-top:5px ;
+}
+.menu_bar{
+   
+    border-bottom: 3px solid rgb(17, 16, 16);
+    border-top: 3px solid rgb(122, 110, 110);
+}
+.menu_list{
+    display: flex;
+   justify-content: center;
+   margin:5px 0;
+}
+.list_item{
+    margin: 0 20px;
+    list-style: none;
+    font-weight: 600;
+}
+.list_item a{
+    text-decoration: none;
+    color: rgb(12, 10, 10);;
+
+}
+.newHost{
+    display: flex;
+   justify-content: center;
+    padding-top: 25px;
+    
+  
+}
+.banner_left{
+    margin-right: 25px;
+    width:571px;
+    height:571px;
+    position: relative;
+    
+}
+.banner_right-top{
+    width:560px;
+    height:270px; 
+    position: relative;
+}
+.banner_right-bottom{
+    position: relative;
+    width:560px;
+    height:270px;
+    margin-top: 30px;
+}
+.content_banner{
+    background-color: white;
+    padding: 15px 25px;
+    margin-top: 5px;
+}
+.categogy_name{
+    border-radius: 2px 2px 0 0 ;
+    color: rgb(243, 237, 237);
+    background-color:red;
+    padding:5px;
+    margin-left: 25px ;
+}
+.card_wrapper {
+    position: absolute;
+    bottom: 0;
+    margin: 0 25px;
+}
+p{
+    margin-top: 10px;
+    text-indent: 25px;
+}
+.content{
+   display: flex;
+   justify-content: center;
+   margin-top: 25px;
+}
+.title_line-left{
+    margin:0 35px 7px 0;
+    width:555px;
+   border-bottom: 3px solid rgb(150, 142, 142);
+   position:relative;
+}
+.line{
+    top:17px;
+    position: absolute;
+    width:200px;
+    border-bottom: 3px solid rgb(238, 17, 17);  
+}
+.title_line{
+    display: flex;
+    justify-content: space-between;
+}
+.latestNew{ 
+    width:800px;
+    flex-wrap: wrap-reverse;
+}
+.tag_line{
+    display: flex;
+    justify-content: space-between;
+}
+.tag_line-right{
+    margin:0 0 9px 0;
+    width:200px;
+    border-bottom: 3px solid rgb(150, 142, 142);
+   position:relative;
+}
+.more_view{
+    text-decoration: none;
+    color: rgb(2, 2, 2);
+}
+.line-right{
+    top:15px;
+    position: absolute;
+    width:70px;
+    border-bottom: 3px solid rgb(9, 205, 219);  
+}
+.latesNew-content-title{
+    padding-right: 30px;
+}
+.latesNew_content{
+    margin-top:20px;
+    display: flex;
+    text-decoration: none;
+    color: black;
+}
+.popularNew-content{
+    margin-left: 15px;
+}
+.popularNew_name-top{
+    background-color: rgb(47, 11, 175);
+    color:#fff;
+    padding:3px;
+   
+}
+
+.latestNew_left{
+    padding-top: 29px;
+}
+.categogy_name-title{
+    margin-left:25px ;
+    background-color: rgb(47, 11, 175);
+}
+.popularNews{
+    padding-top:1px;
+    width:360px;  
+}
+.popularNews_top-content{
+    display: flex;
+    margin-top:25px;
+}
+.popularNews_tag{
+    margin-top:35px;
+}
+.title{
+    display: flex;
+    margin-top: 15px;
+}
+.icon-tag{
+    margin:5px 5px 0 0 ;
+}
+.popularNews_banner-item{
+    margin-top: 20px;
+}
+.footer{
+    display: flex;
+    justify-content: center;
+    border-top: 3px solid rgb(10, 10, 10);
+    border-bottom:3px solid rgb(10, 10, 10);
+    margin: 50px 0 ;
+}
+.footer_logo{
+    margin-right: 35px;
+}
+.email_footer{
+    text-decoration: none;
+    color:black;
+}
