@@ -1,13 +1,28 @@
 const $ = document.querySelector.bind(document)
 const $$ = document.querySelectorAll.bind(document)
 const header = $('.header_title')
-const menubar = $('.menu_list')
+const menubar = $('.menu_bar')
 const popularNew = $('.popularNews_banner')
 const popularTag = $('.tag_list')
 const latestNew = $('.latestNew')
 const popularNew_Top = $('.popularNew_top')
 const footers = $('.footer_content-info')
+            var slideIndex = 1;
+            showDivs(slideIndex);
+            function plusDivs(n) {
+            showDivs(slideIndex += n);
+            }
 
+            function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("slide_image");
+            if (n > x.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = x.length}
+            for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";  
+            }
+            x[slideIndex-1].style.display = "block";  
+            }
 
 
 const web = {
@@ -238,8 +253,8 @@ const web = {
                    header.innerHTML = headerElemt;
                     const menu = this.menuBar.map((menu_bar,index) =>{
                         return`
-                        <ul class="menu_list">
-                        <li class="list_item"><a href="">${menu_bar} </a></li>
+                        <ul class="nav justify-content-center">
+                        <li class="nav-item"><a href="">${menu_bar} </a></li>
                         </ul>
                         `
                     })
@@ -255,7 +270,7 @@ const web = {
                             ${lateNew.category_name}
                         </span>
                          <div class="content_banner">
-                             <h3>${lateNew.title}</h3>
+                             <h4>${lateNew.title}</h4>
                              <h5> ${lateNew.date}, by ${lateNew.author}</h5>
                              <p>${lateNew.content} </p>
                          </div>                  
@@ -266,6 +281,7 @@ const web = {
                     latestNew.innerHTML = lates.join('');
                     const popularTop = this.popularNews.map((popularNew,index) => {
                         return `
+                        <a href="#" class="latesNew_content-link">
                         <div class="popularNews_top-content">
                         <div class="popularNew-img">
                         <img src="${popularNew.image}" alt="${popularNew.alt}" loading="lazy" >
@@ -276,11 +292,12 @@ const web = {
                            ${popularNew.category_name}
                         </span>
                          <div class="popularNew_content-top" >
-                             <h3>${popularNew.title}</h3>                            
+                             <h5>${popularNew.title}</h5>                            
                             
                          </div>
                     </div>
                     </div>
+                    </a>
                         `
                     })
                     popularNew_Top.innerHTML = popularTop.join('');
@@ -297,17 +314,17 @@ const web = {
                     popularNew.innerHTML = popularNew1.join('');
                     const tag = this.tag.map((tags,index) =>{
                         return `
-                        <div class="title">
+                        <a  href="#" class="title">
                         <i class="fas fa-tags icon-tag"></i>
-                            <h4>${tags.tag_1}</h4>
-                         </div>
+                            <h5>${tags.tag_1}</h5>
+                         </a>
                         `
                     })
                     popularTag.innerHTML = tag.join('');
                     const footer_content = `
-                    <h2>${footer. title}</h2>
-                    <p>${footer.content}</p>
-                    <h5>${footer.address}<br>${footer.phone}<br><a href="#" class="email_footer">${footer.email}</a></p>
+                    <h3>${footer. title}</h3>
+                    <p>${footer.content}<br>
+                    ${footer.address}<br>${footer.phone}<br><a href="#" class="email_footer">${footer.email}</a></p>
                     `
                     footers.innerHTML = footer_content;
                    
@@ -317,4 +334,6 @@ const web = {
             }  
 }
 web.start()
+
+                   
 console.log('Hello wrold')
